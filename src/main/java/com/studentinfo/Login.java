@@ -23,7 +23,7 @@ public final class Login extends HttpServlet {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/batch197?useSSL=false", "root",
-					"55035");
+					"root");
 			PreparedStatement ps = c.prepareStatement("select * from register where email=? and password=?");
 			ps.setString(1, email);
 			ps.setString(2, password);
