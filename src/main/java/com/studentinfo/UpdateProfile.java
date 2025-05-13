@@ -27,7 +27,7 @@ public class UpdateProfile extends HttpServlet{
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/batch197?useSSL=false", "root", "55035");
+            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/batch197?useSSL=false", "root", "root");
             PreparedStatement ps = c.prepareStatement("UPDATE register SET mobileNo = ?, city = ?, state = ?, pin = ?, password = ? WHERE email = ?");
             ps.setString(1, mobile);
             ps.setString(2, city);
